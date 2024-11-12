@@ -1,0 +1,13 @@
+<h1>Check out these tasks </h1>
+<div class="flex">
+
+  <% @tasks.each do |task| %>
+  <% if task.completed == true %>
+    <i class="fa-solid fa-circle-check"></i>
+      <% else %>
+    <i class="fa-solid fa-circle-check"></i>
+  <% end %>
+ <%= link_to task.title, task_path(task) %>
+  <% end %>
+
+</div>
